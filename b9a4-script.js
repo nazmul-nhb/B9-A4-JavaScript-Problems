@@ -52,23 +52,32 @@ function deleteInvalids(array) {
     }
 }
 
-console.log(deleteInvalids([1, null, undefined, 18, -19, NaN, "12", [1, 2], { ob: "lala" }]));
+// console.log(deleteInvalids([1, null, undefined, 18, -19, NaN, "12", [1, 2], { ob: "lala" }]));
 
 
 
-/* 
+// what if user inputs birth year that is not a number!
+// site name er 1st letter er por ki capital hote parbe?
+// username ki upper/lower case definite?
+// 
 function password(obj) {
-    //write your code here
+    if (!obj.name || !obj.birthYear || !obj.siteName || obj.birthYear.toString().length !== 4) {
+        return "invalid";
+    }
+    else {
+        const newSiteName = obj.siteName[0].toUpperCase() + obj.siteName.slice(1).toLowerCase();
+        const newPassword = `${newSiteName}#${obj.name}@${obj.birthYear}`;
+        return newPassword;
+    }
 }
- */
+
+// console.log(password({ name: "kolimuddin", birthYear: 2002, siteName: "google" }));
 
 
 
-/* 
 function monthlySavings(arr, livingCost) {
     
 }
- */
 
 
 
