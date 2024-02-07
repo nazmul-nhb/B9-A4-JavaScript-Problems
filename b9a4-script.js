@@ -40,7 +40,7 @@ function deleteInvalids(array) {
     const validNumbers = [];
 
     if (Array.isArray(array) === false) {
-        return `“Invalid Array” : Please, input an array!`
+        return `“Invalid Array” : Please, input an array!`;
     }
     else {
         for (let element of array) {
@@ -75,9 +75,28 @@ function password(obj) {
 
 
 
+// about the “”
 function monthlySavings(arr, livingCost) {
-    
+    let totalEarnings = 0;
+    let totalSavings;
+
+    if (Array.isArray(arr) === false || typeof livingCost !== "number") {
+        return "invalid input";
+    }
+    for (let singleEarning of arr) {
+        totalEarnings = totalEarnings + singleEarning;
+        if (singleEarning >= 3000) {
+            const paidTax = singleEarning * 20 / 100;
+            totalSavings = totalEarnings - livingCost - paidTax;
+        }
+        else {
+            totalSavings = totalEarnings - livingCost;
+        }
+    }
+    if (totalSavings < 0) {
+        return "earn more";
+    }
+    return totalSavings;
 }
 
-
-
+console.log(monthlySavings([900, 2700, 3400], 10000));
