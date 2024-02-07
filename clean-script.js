@@ -16,13 +16,6 @@ function calculateMoney(ticketSale) {
 
 }
 
-console.log("Task #1");
-console.log(calculateMoney(10));
-console.log(calculateMoney(1055));
-console.log(calculateMoney(93));
-console.log(calculateMoney(-130));
-console.log("----------------------------------");
-
 function checkName(name) {
     const goodEndings = "AaYyIiEeOoUuWw";
 
@@ -36,15 +29,6 @@ function checkName(name) {
         return "Bad Name";
     }
 }
-
-console.log("Task #2");
-console.log(checkName("Salman"));
-console.log(checkName("RAFEE"));
-console.log(checkName("Jhankar"));
-console.log(checkName(199));
-console.log(checkName(["Rashed"]));
-console.log("----------------------------------");
-
 
 function deleteInvalids(array) {
     const validNumbers = [];
@@ -62,18 +46,6 @@ function deleteInvalids(array) {
     }
 }
 
-console.log("Task #3");
-console.log(deleteInvalids([1, null, undefined, 18, -19, NaN, "12", [1, 2], { ob: "lala" }]));
-console.log(deleteInvalids(["1", { num: 2 }, NaN]));
-console.log(deleteInvalids([1, 2, -3]));
-console.log(deleteInvalids({ num: [1, 2, 3] }));
-console.log("----------------------------------");
-
-
-// what if user inputs birth year that is not a number!
-// site name er 1st letter er por ki capital hote parbe?
-// username ki upper/lower case definite?
-// what if i include more validations
 function password(obj) {
     if (!obj.name || !obj.birthYear || !obj.siteName || obj.birthYear.toString().length !== 4) {
         return "invalid";
@@ -85,15 +57,6 @@ function password(obj) {
     }
 }
 
-console.log("Task #4");
-console.log(password({ name: "kolimuddin", birthYear: 1999, siteName: "google" }));
-console.log(password({ name: "rahat", birthYear: 2002, siteName: "Facebook" }));
-console.log(password({ name: "toky", birthYear: 200, siteName: "Facebook" }));
-console.log(password({ name: "maisha", birthYear: 2002 }));
-console.log("----------------------------------");
-
-
-// about the “”
 function monthlySavings(arr, livingCost) {
     let totalEarnings = 0;
     let totalSavings;
@@ -116,9 +79,3 @@ function monthlySavings(arr, livingCost) {
     }
     return totalSavings;
 }
-
-console.log("Task #5");
-console.log(monthlySavings([1000, 2000, 3000], 5400));
-console.log(monthlySavings([1000, 2000, 2500], 5000));
-console.log(monthlySavings([900, 2700, 3400], 10000));
-console.log(monthlySavings(100, [900, 2700, 3400]));
