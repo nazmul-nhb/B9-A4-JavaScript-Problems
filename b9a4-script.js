@@ -21,7 +21,7 @@ function calculateMoney(ticketSale) {
 function checkName(name) {
     const goodEndings = "AaYyIiEeOoUuWw";
 
-    if(typeof name !== "string"){
+    if (typeof name !== "string") {
         return "invalid";
     }
     else if (goodEndings.includes(name[name.length - 1])) {
@@ -37,17 +37,22 @@ function checkName(name) {
 
 
 function deleteInvalids(array) {
-    const validNumbers =[];
+    const validNumbers = [];
 
-    for (let element of array ){
-        if (typeof element === "number") {
-            validNumbers.push(element);
-        }
+    if (Array.isArray(array) === false) {
+        return `“Invalid Array” : Please, input an array!`
     }
-    return validNumbers;
+    else {
+        for (let element of array) {
+            if (typeof element === "number" && isNaN(element) === false) {
+                validNumbers.push(element);
+            }
+        }
+        return validNumbers;
+    }
 }
 
-console.log(deleteInvalids([NaN, 1, 12, 0, -1, undefined ]));
+console.log(deleteInvalids([1, null, undefined, 18, -19, NaN, "12", [1, 2], { ob: "lala" }]));
 
 
 
