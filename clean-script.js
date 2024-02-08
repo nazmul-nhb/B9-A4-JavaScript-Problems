@@ -13,7 +13,6 @@ function calculateMoney(ticketSale) {
         const totalSavings = totalEarnings - totalExpenses;
         return totalSavings;
     }
-
 }
 
 function checkName(name) {
