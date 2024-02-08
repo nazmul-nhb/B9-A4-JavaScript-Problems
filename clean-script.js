@@ -61,7 +61,7 @@ function monthlySavings(arr, livingCost) {
     let totalEarnings = 0;
     let totalSavings;
 
-    if (Array.isArray(arr) === false || typeof livingCost !== "number") {
+    if (Array.isArray(arr) === false || typeof livingCost !== "number" || isNaN(livingCost) === true) {
         return "invalid input";
     }
     for (let singleEarning of arr) {
