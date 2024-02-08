@@ -5,7 +5,7 @@ function calculateMoney(ticketSale) {
     const staffWages = 50;
 
     if (ticketSale < 0) {
-        return `“Invalid Number” : The number of ticket sales cannot be a negative value!`;
+        return `Invalid Number! The number of ticket sales cannot be a negative value!`;
     }
     else {
         const totalEarnings = ticketPrice * ticketSale;
@@ -50,7 +50,7 @@ function deleteInvalids(array) {
     const validNumbers = [];
 
     if (Array.isArray(array) === false) {
-        return `“Invalid Array” : Please, input an array!`;
+        return `Invalid Input! Please, input an array!`;
     }
     else {
         for (let element of array) {
@@ -73,7 +73,12 @@ console.log("----------------------------------");
 // what if user inputs birth year that is not a number!
 // site name er 1st letter er por ki capital hote parbe?
 // username ki upper/lower case definite?
+// what if birthYear is more than 4 digit?
 // what if i include more validations
+// what if input is not an object
+// about the “”
+
+
 function password(obj) {
     if (!obj.name || !obj.birthYear || !obj.siteName || obj.birthYear.toString().length !== 4) {
         return "invalid";
@@ -86,14 +91,15 @@ function password(obj) {
 }
 
 console.log("Task #4");
+console.log(password('abc', 'def', 'mine'));
 console.log(password({ name: "kolimuddin", birthYear: 1999, siteName: "google" }));
+console.log(password({ name: "rahat", birthYear: 2002, siteName: "Facebook" }));
 console.log(password({ name: "rahat", birthYear: 2002, siteName: "Facebook" }));
 console.log(password({ name: "toky", birthYear: 200, siteName: "Facebook" }));
 console.log(password({ name: "maisha", birthYear: 2002 }));
 console.log("----------------------------------");
 
 
-// about the “”
 function monthlySavings(arr, livingCost) {
     let totalEarnings = 0;
     let totalSavings;

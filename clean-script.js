@@ -5,7 +5,7 @@ function calculateMoney(ticketSale) {
     const staffWages = 50;
 
     if (ticketSale < 0) {
-        return `“Invalid Number” : The number of ticket sales cannot be a negative value!`;
+        return `Invalid Number! The number of ticket sales cannot be a negative value!`;
     }
     else {
         const totalEarnings = ticketPrice * ticketSale;
@@ -34,7 +34,7 @@ function deleteInvalids(array) {
     const validNumbers = [];
 
     if (Array.isArray(array) === false) {
-        return `“Invalid Array” : Please, input an array!`;
+        return `Invalid Input! Please, input an array!`;
     }
     else {
         for (let element of array) {
@@ -79,3 +79,4 @@ function monthlySavings(arr, livingCost) {
     }
     return totalSavings;
 }
+
