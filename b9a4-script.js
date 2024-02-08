@@ -14,7 +14,7 @@ function calculateMoney(ticketSale) {
         return totalSavings;
     }
 
-}
+};
 
 console.log("Task #1");
 console.log(calculateMoney(10));
@@ -35,7 +35,7 @@ function checkName(name) {
     else {
         return "Bad Name";
     }
-}
+};
 
 console.log("Task #2");
 console.log(checkName("Salman"));
@@ -60,7 +60,7 @@ function deleteInvalids(array) {
         }
         return validNumbers;
     }
-}
+};
 
 console.log("Task #3");
 console.log(deleteInvalids([1, null, undefined, 18, -19, NaN, "12", [1, 2], { ob: "lala" }]));
@@ -88,7 +88,7 @@ function password(obj) {
         const newPassword = `${newSiteName}#${obj.name}@${obj.birthYear}`;
         return newPassword;
     }
-}
+};
 
 console.log("Task #4");
 console.log(password('abc', 'def', 'mine'));
@@ -121,7 +121,7 @@ function monthlySavings(arr, livingCost) {
         return "earn more";
     }
     return totalSavings;
-}
+};
 
 console.log("Task #5");
 console.log(monthlySavings([1000, 2000, 3000], 5400));
